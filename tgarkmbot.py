@@ -268,7 +268,7 @@ async def start_cmd(message: Message, state: FSMContext):
         [KeyboardButton(text='⚙️ Изменить Size')],
         [KeyboardButton(text='🔄 Сменить пару')]
     ], resize_keyboard=True)
-    await message.answer('Бот готов, мой господин.', reply_markup=kb)
+    await message.answer('Бот готов', reply_markup=kb)
     await state.set_state(BotState.idle)
 
 @dp.message(F.text == '▶️ Старт цикла')
